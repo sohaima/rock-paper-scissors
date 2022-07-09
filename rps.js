@@ -6,6 +6,7 @@ function computerPlay() {
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
   }
+  
 function playRound(playerSelection,computerSelection) {
     const p = playerSelection.toLowerCase();
     const c = computerSelection.toLowerCase();
@@ -30,7 +31,7 @@ function game() {
     let playerScore = 0;
     for (let i=1;i<=5;i++) {
         const computerSelection = computerPlay();
-        const playerSelection = "rock";
+        const playerSelection = prompt("Enter your choice: ");
         console.log("You play " + playerSelection + ".");
         console.log("Computer plays " + computerSelection + ".");
         if (playRound(playerSelection,computerSelection) == 1) {
